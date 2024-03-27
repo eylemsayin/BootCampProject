@@ -46,9 +46,15 @@ public class UserConfiguration : IEntityTypeConfiguration<User>
                 new()
                 {
                     Id = AdminId,
+                    UserName = "admin",
+                    FirstName = "Eylem",
+                    LastName = "Sayın",
+                    NationalIdentity = "123456",
+                    DateOfBirth = DateTime.Now,
                     Email = "narch@kodlama.io",
                     PasswordHash = passwordHash,
-                    PasswordSalt = passwordSalt
+                    PasswordSalt = passwordSalt,
+                    CreatedDate = DateTime.Now,
                 };
             yield return adminUser;
         }
